@@ -34,8 +34,8 @@ read = (text) => {
 };
 
 
-change = () => {
-    user.change()
+change = (collective) => {
+    user.change(collective)
         .then((data) => {
             this.setState({
                 clv: data,
@@ -62,12 +62,8 @@ handleChange = event => {
 
 render () {  
     const { text } = this.state
-    const GLU = {"colectivos": [{
-        "codColectivo": "GLU",
-        "estadoBean": 3
-        }]
-    }
-
+    const GLU = {"collectives":["3TO"]}
+    
     return (
         <>
         <Nav/>

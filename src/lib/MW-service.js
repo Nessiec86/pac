@@ -28,7 +28,7 @@ class User {
     
     change = (GLU) => {
         return this.User
-        .put(`fidelity?idFidelizado=65171&data=${GLU}` )
+        .put(`client/65171?data=${JSON.stringify(GLU)}`)
         .then(({ data }) => data);
         };
     
