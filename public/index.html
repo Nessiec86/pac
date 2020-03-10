@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="veritas_logooficial.jpg" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Bamboo</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "766f30de-ed2a-4fd2-8de2-d2df25ab22ef",
+        notifyButton: {
+          enable: true,
+        },
+      });
+    });
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBjVx7Nx2EyG1GcKanEXZtUwEDJhpYjtz4",
+      authDomain: "bamboo-ver.firebaseapp.com",
+      databaseURL: "https://bamboo-ver.firebaseio.com",
+      projectId: "bamboo-ver",
+      storageBucket: "bamboo-ver.appspot.com",
+      messagingSenderId: "360025731296",
+      appId: "1:360025731296:web:2ce76271e0a30ca0142085",
+      measurementId: "G-QRMPX95CS6"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <!-- 	Import FontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/944f290c37.js"></script>
+  
+</html>
