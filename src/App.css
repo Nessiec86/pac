@@ -296,3 +296,49 @@ hr {
     margin-bottom: 15rem;
   }
 }
+
+/* PAC */
+.btn_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btns {
+  max-width: fit-content;
+  border-radius: 45px;
+  padding: 10px 40px;
+  margin: 5%;
+  background-color: white;
+  border: 2px solid blue;
+  color: blue;
+  font: bold;
+  align-self: center;
+}
+.btns:hover {
+  background-color: blue;
+  transition: 0.5s;
+  color: white;
+  font: bold;
+}
+.menu_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#myInput {
+  border: none;
+  border-bottom: 2px solid #a4d4b2;
+  align-self: center;
+}
+.val {
+  color: #a4d4b2;
+  border: 2px solid #a4d4b2;
+  align-self: center;
+}
+.val:hover {
+  background-color: #a4d4b2;
+  transition: 0.5s;
+  color: white;
+  font: bold;
+}
