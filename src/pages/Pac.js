@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Nav from '../Components/Nav';
 import { Button } from 'react-bootstrap';
-
 import user from '../lib/MW-service.js';
 
 
@@ -11,6 +10,7 @@ state = {
     data: '',
     text: '',
     clv: '',
+    inputok: true
 }
 
 
@@ -22,6 +22,7 @@ read = (text) => {
     .then((data) => { 
         this.setState({
             data,
+            inputok: false
         });
         console.log(data)
     })
@@ -31,6 +32,7 @@ read = (text) => {
             isLoading: false
         });
     });
+    // window.location.assign('https://www.change.org/p/gobierno-de-espa%C3%B1a-los-pa%C3%B1ales-no-son-un-lujo-rebajad-su-iva-ya-rebajaivapa%C3%B1alesya');
 };
 
 
@@ -62,8 +64,11 @@ handleChange = event => {
 
 render () {  
     const { text } = this.state
+    console.log(text)
+    const link1 = "https://www.change.org/p/gobierno-de-espa%C3%B1a-los-pa%C3%B1ales-no-son-un-lujo-rebajad-su-iva-ya-rebajaivapa%C3%B1alesya"
     const GLU = {"collectives":["3TO"]}
-    
+    let inputok = this.state.inputok;
+    console.log(inputok)
     return (
         <>
         <Nav/>
@@ -74,9 +79,16 @@ render () {
                 name="text" 
                 value={text}
                 onChange={this.handleChange}/>
-            <Button id='1' onClick={() => this.read(text)}>Pañales</Button>
-            <Button id='2' onClick={() => this.change(GLU)}>Campo</Button>
-            <Button variant="success"className='val' onClick={() => this.handleSubmit()}>VALIDAR</Button>
+                <Button variant="success"className='val' onClick={() => this.handleSubmit()}>VALIDAR</Button>
+            {inputok === true ?
+            <div>  
+                <Button id='1' onClick={() => this.read(text)}>Pañales</Button>
+                <Button id='2' onClick={() => this.change(GLU)}>Higiene femenina</Button>
+                <Button id='3' onClick={() => this.change(GLU)}>Alimentos sin gluten</Button>
+            </div>
+            :
+            <div>Email incorrecto</div>
+            }
         </div>
     </>
     );
