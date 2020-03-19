@@ -69,6 +69,7 @@ render () {
     const GLU = {"collectives":["3TO"]}
     let inputok = this.state.inputok;
     console.log(inputok)
+    
     return (
         <>
         <Nav/>
